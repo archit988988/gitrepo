@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>GiveMePro</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollzer.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		
+<script>
+function myFunction()
+{
+if(document.myForm.formname.value=="" || document.myForm.formname.value==null ){
+document.getElementById('error1').innerHTML="*Please enter your name*";
+return false;
+}
+if(!(document.myForm.formname.value=="" || document.myForm.formname.value==null )){
+document.getElementById('error1').innerHTML="";
+}
+if(document.myForm.formpno.value=="" || document.myForm.formpno.value==null ){
+document.getElementById('error2').innerHTML="*Please enter your phone number*";
+return false;
+}
+if(!(document.myForm.formpno.value=="" || document.myForm.formpno.value==null )){
+document.getElementById('error2').innerHTML="";
+}
+var phoneno = /^\d{10}$/;  
+if(!(document.myForm.formpno.value.match(phoneno)))  
+{  
+document.getElementById('error2').innerHTML="*Please enter a valid phone number*";
+return false;  
+}
+if((document.myForm.formpno.value.match(phoneno)))  
+{  
+document.getElementById('error2').innerHTML="";  
+}          
+
+alert("We have received your request , we'll call you in sometime");
+	
+return true;
+}
+</script>
+
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header" class="skel-layers-fixed">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo" itemscope itemtype="https://schema.org/Service">
+							<span class="image avatar48"><img src="images/gmp.png" alt="" /></span>
+							<h1 id="title"><font face="calibri" size="4">GiveMePro</font></h1>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+							
+								Prologue's nav expects links in one of two formats:
+								
+								1. Hash link (scrolls to a different section within the page)
+								
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+							
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="fa fa-home"><font face="calibri" size="4">Intro</font></span></a></li>
+								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="fa fa-gift"><font  face="calibri"  size="4">Ocassion</font></span></a></li>
+								<li><a href="#portfolio1" id="portfolio1-link" class="skel-layers-ignoreHref"><span class="fa fa-th"><font face="calibri" size="4">Venue</font></span></a></li>
+								<li><a href="#portfoliox" id="portfoliox-link" class="skel-layers-ignoreHref"><span class="fa fa-book"><font face="calibri" size="4">Services</font></span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="fa fa-envelope"><font face="calibri" size="4">Contact</font></span></a></li>
+								
+							</ul>
+						</nav>
+						
+				</div>
+				
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="fa fa-twitter"><span></span></a></li>
+							<li><a href="https://www.facebook.com/pages/GiveMePro/1634054263484761?ref=aymt_homepage_panel" class="fa fa-facebook"><span ></span></a></li>
+							<li><a href="#" class="fa fa-envelope"><span ></span></a></li>
+						</ul>
+				
+				</div>
+			
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover" style= " padding-bottom:300px;">
+						<div class="container">
+
+							<header>
+							<div style="text-align:center">
+								<h2 class="alt"><strong><center>Plan your Ocassion a new way and hire a professional</center></strong><br />
+								 </h2>
+								 </div>
+								<p>We aim to provide the best in market services at the most competitive prices, whether it's a wedding, official conference or a small get together. We provide services for all sorts of budgets and ocassions. <br />
+								</p>
+							</header>
+							
+								
+								
+							<!--<footer>
+								<a href="#portfolio" class="button scrolly">Magna Aliquam</a>
+							</footer>-->
+
+						</div>
+					</section>
+					
+				<!-- Portfolio -->
+				
+					<section id="portfolio" class="two" style = "  padding-top: 20px ;padding-bottom: 20px;">
+    
+
+					
+						<div class="container">
+					
+					
+							<header>
+								<h2><font size="40" color="black">Ocassion</font></h2>
+							</header>
+							
+							<p><font size="6" color="black">What are you celebrating ?</font></p>
+						
+						<form name="myForm" method="post" action="php-form-processor.php" onsubmit="return myFunction()" >
+						
+							<div class="row">
+								<div class="4u">
+									<article class="item">
+										<a  class="image fit"><img src="images/wed.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="wed" value="wed" >Wedding</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a  class="image fit"><img src="images/bir.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="bir" value="bir" >Birthday</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a  class="image fit"><img src="images/kitt.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="kit" value="kit" >Kitty Party</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a class="image fit"><img src="images/xc.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="bac" value="bac" >Bachelor Party</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a  class="image fit"><img src="images/u.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="con" value="con" >Conference</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a  class="image fit"><img src="images/oth.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="mis" value="mis" >Misc</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+							
+							
+
+						</div>
+					</section>
+				<!-- Portfolio -->
+					<section id="portfolio1" class="five" style = " padding-top: 20px ;padding-bottom: 20px;">
+						<div class="container">
+					
+							<header>
+								<h2>Venues</h2>
+							</header>
+							
+							<!--<form>
+							<!-- Squared THREE -->
+							<!--<div class="squaredThree">
+								<input type="checkbox" value="None" id="squaredThree" name="check" />
+								<label for="squaredThree"></label>
+							</div>
+
+							<input type="radio" name="sex" value="Banquet Halls" checked>Banquet Halls
+						    <br>
+							<input type="radio" name="sex" value="Gardens">Gardens
+							</form>-->
+						
+							<div class="row">
+								<div class="6u">
+								
+								
+									<article class="item">
+										<a class="image fit"><img src="images/b.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="ban" value="ban">Banquet Hall</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a  class="image fit"><img src="images/r.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="res" value="res">Restaurant</h3>
+										</header>
+									</article>
+								</div>
+								<div class="6u">
+									<article class="item">
+										<a  class="image fit"><img src="images/g.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="gar" value="gar">Gardens</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a  class="image fit"><img src="images/5.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="5st" value="5st">5Star Venues</h3>
+										</header>
+									</article>
+									
+									
+								</div>
+								
+							</div>
+							
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<!--<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Venues</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+							
+							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus 
+							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae 
+							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem 
+							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper 
+							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec 
+							ornare iaculis.</p>
+
+						</div>
+					</section>
+					-->
+					<section id="portfoliox" class="three" style = "padding-top: 20px ;padding-bottom: 20px;">
+						<div class="container">
+					
+							<header>
+								<h2>Services</h2>
+							</header>
+							
+							<p>What do you need ?</p>
+						
+							<div class="row">
+								<div class="4u">
+									<article class="item">
+										<a class="image fit"><img src="images/wedserr.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="wedser" value="wedser">Wedding Related Services</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a class="image fit"><img src="images/phoserr.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="phoser" value="phoser">Photographers/Video Services</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a  class="image fit"><img src="images/makserr.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="makser" value="makser">Make Up</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a  class="image fit"><img src="images/othserr.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="catser" value="catser">Caterers</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a  class="image fit"><img src="images/decserr.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="decser" value="decser">Decorators</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a  class="image fit"><img src="images/othserrr.jpg" alt="" /></a>
+										<header>
+											<h3><input type="checkbox" name="othser" value="othser">Other Event Services</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+							
+
+						</div>
+					</section>
+			
+				<!-- Contact -->
+				
+					<section id="contact" class="four" style = "padding-top: 20px ;padding-bottom: 20px;">
+						<div class="container"  itemscope itemtype="https://schema.org/City">
+
+							<header>
+								<h2>Contact</h2>
+								<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+							</header>
+
+							<p>As soon as we get your request we will call you for further details .
+							According to your details we will provide you with best suitable professionals within 24 hours.
+							For now our services are available only in Jodhpur</p>
+							
+							
+								<div class="row 50%">
+									<div class="6u"><input type="text" name="formname" placeholder="Name" style="padding: 5px 50px;border-style:solid; border-color:#000;border-radius: 10px;"/><div id="error1" style="color:#9F0202" ></div></div>
+										
+									<div class="6u"><input type="text" name="formpno" placeholder="Phone NO." style = "padding: 5px 50px ;border-style:solid; border-color:#000;border-radius: 10px;"/><div id="error2" style="color:#9F0202"></div></div>
+								</div>
+								<div class="row 50%">
+									<div class="12u">
+										<textarea name="message" align="center" placeholder= "Any Specific Requirement ?" style="
+    width: 792px;
+    height: 160px; border-style:solid; border-color:#000;border-radius: 10px;text-align:center; 
+"></textarea>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="12u">
+										<input type="hidden" name="formSubmit" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
+										<input type="submit" value="Submit"/>
+										
+									</div>
+								</div>
+								<p>More exciting services coming soon!!!</p>
+							</form>
+							
+							
+
+						</div>
+					</section>
+			
+			</div>
+
+		<!-- Footer -->
+			
+
+	</body>
+</html>
