@@ -2,13 +2,13 @@
 
 $msg ='submit';
 
-  $name = isset($_POST['formname']) ? $_POST['formname'] :"";
-  $phone = isset($_POST['formpno']) ? $_POST['formpno'] :"";
-  $message = isset($_POST['message']) ? $_POST['message'] :"";
-  $sperec = isset($_POST['sperec']) ? $_POST['sperec'] :"";
-  $occasion = isset($_POST['occasion']) ? $_POST['occasion'] :"";
-  $venue = isset($_POST['venue']) ? $_POST['venue'] :"";
-  $eventservice = isset($_POST['service']) ? $_POST['service'] :"";
+   $varMovie = isset($_POST['formname']) ? $_POST['formname'] :"";
+   $varName = isset($_POST['formpno']) ? $_POST['formpno'] :"";
+  $wed = isset($_POST['wed']) ? $_POST['wed'] :"";
+  $bir = isset($_POST['bir']) ? $_POST['bir'] :"";
+  $kit = isset($_POST['kit']) ? $_POST['kit'] :"";
+  $bac = isset($_POST['bac']) ? $_POST['bac'] :"";
+  $con = isset($_POST['con']) ? $_POST['con'] :"";
   $mis = isset($_POST['mis']) ? $_POST['mis'] :"";
   $ban = isset($_POST['ban']) ? $_POST['ban'] :"";
   $hot = isset($_POST['hot']) ? $_POST['hot'] :"";
@@ -20,25 +20,26 @@ $msg ='submit';
   $decser = isset($_POST['decser']) ? $_POST['decser'] :"";
   $makser = isset($_POST['makser']) ? $_POST['makser'] :"";
   $othser = isset($_POST['othser']) ? $_POST['othser'] :"";
-  $errorMessage = "";
+  
+   $errorMessage = "";
 
    // - - - snip - - - 
 
 
 ?> 
 <?php
-   if(empty($name)) {
-      $errorMessage .= "<li>You forgot to enter your name</li>";
+   if(empty($varMovie)) {
+      $errorMessage .= "<li>You forgot to enter a movie!</li>";
    }
-   if(empty($phone)) {
-      $errorMessage .= "<li>You forgot to enter your phone number!</li>";
+   if(empty($varName)) {
+      $errorMessage .= "<li>You forgot to enter a name!</li>";
    }
 ?> 
 <?php
 $servername = "sql18.main-hosting.eu";
 $username = "u648126045_give";
 $password = "archit988988";
-$dbname = "";
+$dbname = "u648126045_give";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -47,7 +48,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO master_givemepro(id, name ,phone, address, date , time, occasion, venue ,occasion, venue, eventservice, service, special_requirement)
+$sql = "INSERT INTO myguests (name, pno ,wed, bir, kit , bac, con, mis ,ban, hot, gar, 5st, wedser, phoser, vidser, decser, makser, othser, datetime)
 VALUES ('".$varMovie."', '".$varName."', '".$wed."', '".$bir."', '".$kit."' , '".$bac."', '".$con."', '".$mis."' ,'".$ban."', '".$hot."', '".$gar."', '".$st."', '".$wedser."', '".$phoser."', '".$vidser."', '".$decser."', '".$makser."', '".$othser."', now())";// TABLE TODO
 
 
