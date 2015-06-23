@@ -3,13 +3,121 @@
 
 <head>
 
+	<style>
+	.whatever { display: inline-block; }
+	/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 17px; height: 17px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 0; left: 4px;
+  font-size: 14px;
+  color: #09ad7e;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #4778d9!important;
+}
+
+
+
+
+
+
+/* Useless styles, just for demo design */
+
+body {
+  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+  color: #777;
+}
+h1, h2 {
+  margin-bottom: 5px;
+  font-weight: normal;
+  text-align: center;
+}
+h2 {
+  margin: 5px 0 2em;
+  color: #aaa;
+}
+form {
+  margin: 0 auto;
+  display:inline-block;
+}
+.txtcenter {
+  margin-top: 4em;
+  font-size: .9em;
+  text-align: center;
+  color: #aaa;
+}
+.copy {
+ margin-top: 2em; 
+}
+.copy a {
+ text-decoration: none;
+ color: #4778d9;
+}
+	</style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>GiveMePro</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -83,18 +191,17 @@
             <div class="header-content-inner">
 				<h1 style="font-size: 65px; background-color: black;opacity:0.4">Plan your ocassions a new way hire a professional</h1>
                 <form action="" method="POST" style="padding-top:50px">
-    <select name="ocassion" id="ocassion" style="background:transparent;border:3px;border-style:solid; border-color:#000;border-radius: 10px">
+    <select name="ocassion" id="ocassion" style="background:transparent;border:2px;border-style:solid; border-color:#000;border-radius: 3px">
         
-		<option value="null"selected="selected"disabled="disabled">Select an Ocassion</option>
+		<option value="null"selected="selected"disabled="disabled">Select an Occasion</option>
         <option value="null" style="color:black">None</option>
 		<option value="wed"style="color:black">Wedding</option>
         <option value="con"style="color:black">Conference</option>
         <option value="bir"style="color:black">Birthday Party</option>
         <option value="kit"style="color:black">Kitty Party</option>
-		<option value="bac"style="color:black">Bachalore Party</option>
-        
+		<option value="bac"style="color:black">Bachelor Party</option>
     </select>
-	<select name="venue" id="venue"style="background:transparent ;border:3px;border-style:solid; border-color:#000;border-radius: 10px" >
+	<select name="venue" id="venue"style="background:transparent ;border:2px;border-style:solid; border-color:#000;border-radius: 3px" >
 	<option value="null"selected="selected"disabled="disabled">Select a Venue</option>
         <option value="null"style="color:black">None</option>
         <option value="Ban"style="color:black">Banquet Hall</option>
@@ -102,49 +209,70 @@
         <option value="Gar"style="color:black">Garden</option>
         <option value="5st"style="color:black">5Star Venue</option>
     </select>
-	<select name="service" id="service"style="background:transparent;border:3px;border-style:solid; border-color:#000;border-radius: 10px" >
+	<H2>Select Services</H2>
+	<br>
+	<form action="#" display = "inline-block">
+	<div class="whatever">
+	<input type="checkbox" id="test1" />
+    <label for="test1">Wedding Planner&nbsp&nbsp&nbsp</label>
+    <input type="checkbox" id="test2" />
+    <label for="test2">Make Up Artists&nbsp&nbsp&nbsp</label>
+    <input type="checkbox" id="test3" />
+    <label for="test3">Caterers &nbsp&nbsp&nbsp  </label>
+    <input type="checkbox" id="test4" />
+    <label for="test4">Decorators &nbsp&nbsp &nbsp </label>
+	<input type="checkbox" id="test5" />
+    <label for="test5">Photographer/Videographer</label>  
+	</div>
+	</form>
+	<!--<select name="service" id="service"style="background:transparent;border:3px;border-style:solid; border-color:#000;border-radius: 10px" >
 	<option value="null"selected="selected"disabled="disabled">Select a Service</option>
         <option value="null"style="color:black">None</option>
         <option value="wedser"style="color:black">Wedding Planner</option>
-        <option value="makser"style="color:black">Makeup Artist</option>
+        <option value="makser"style="color:black">Make up Artist</option>
         <option value="phoser"style="color:black">Photographer/Videographer</option>
         <option value="catser"style="color:black">Caterers</option>
 		<option value="decser"style="color:black">Decorators</option>
         
     </select>
+	-->
 	
 
     
 	
 <div style="padding-top:20px"> 
  <div class="row 50%">
-									<div class="6u"><input type="text" name="formname" placeholder="Name" style="text-align:center;padding: 5px 50px;border-style:solid; border-color:orange;border-radius: 10px;background:transparent;background-color: black;opacity:0.4"/><div id="error1" style="color:#9F0202  " ></div></div>
-										
-									<div class="6u"><input type="text" name="formpno" placeholder="Phone NO." style = "text-align:center;padding: 5px 50px ;border-style:solid; border-color:orange;border-radius: 10px;background:transparent;background-color: black;opacity:0.4"/><div id="error2" style="color:#9F0202 "></div></div>
+								
+									<div class="6u"><input type="text" name="formpno" placeholder="Book Your Call" style = "text-align:center;padding: 5px 50px ;border-style:solid; border-color:orange;border-radius: 10px;background:transparent;background-color: black;opacity:0.4"/><div id="error2" style="color:#9F0202 "></div></div>
 								</div>
-								<div class="row 50%">
+								<!--<div class="row 50%">
 									<div class="12u">
 										<input type="textarea" name="message" align="center" placeholder= "Address" style="
     width: 276px;
     height: 80px; border:3px;border-style:solid; border-color:orange;border-radius: 10px;text-align:center;background:transparent;background-color: black;opacity:0.4;
 "/>
-<div class="12u">
+<!--<div class="12u">
 <input type="textarea" name="sperec" placeholder="Any special requirements?" style="padding: 5px 50px;border-style:solid; border-color:orange;border-radius: 10px;background:transparent;background-color: black;opacity:0.4"/>
 									</div>
 									</div>
-								</div>
+								</div>-->
+								
  
  
  </div>  
+ <!--
 <input type ='image' src="img/sub.png"  style="
     border-top-width: 60px;
     width: 80px;opacity:0.8
-"/> 
-</form>                
+"/> -->
+<br>
+<button type="button" class="btn btn-default">SUBMIT</button>
+</form>        
+       
             </div>
         </div>
     </header>
-
+<!--
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
@@ -156,6 +284,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 	</body>
 	</html>
