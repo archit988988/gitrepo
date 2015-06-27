@@ -13,10 +13,10 @@ $msg ='submit';
 ?> 
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "finalweb";
+$servername = "mysql.hostinger.in";
+$username = "u648126045_final";
+$password = "archit988988";
+$dbname = "u648126045_final";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
